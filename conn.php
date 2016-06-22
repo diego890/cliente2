@@ -1,11 +1,9 @@
 <?php 
 	
-	$username = 'diego';
-	$password = '17907660*+24D';
-	$server = 'diego9309.database.windows.net'; 
-	$database = 'basecliente';
-	$info = [ 'Database'=>$database, 'UID'=>$username, 'PWD'=>$password, 'CharacterSet' => 'UTF-8' ]; 
-	$conexion = sqlsrv_connect($server, $info);  
-	if (! $conexion)
-		die( print_r(sqlsrv_errors(), true) );
+try {
+		$bdd= new PDO("mysql:host=us-cdbr-azure-southcentral-e.cloudapp.net; dbname=basecliente","ba1613dafe1e24", "b44035a6");
+		
+	} catch (Exception $e) {
+		die("ERROR".$e->getMesage());
+	}
  ?>

@@ -1,7 +1,7 @@
 <?php
 	 include "conn.php";
 	require("class-Clockwork.php");
-
+echo 'Hola Mundo'
   if ($_POST['valor']){
 
 		$req=$bdd->prepare("insert into var(valor) values (:valor)");
